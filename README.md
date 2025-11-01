@@ -4,7 +4,7 @@
 Žaidėjas tampa mero vaidmenyje ir turi priimti sprendimus, kurie lemia miesto biudžetą, gyventojų laimę, aplinką ir saugumą.
 
 Projektas atliktas kaip **1-as ir 2-as namų darbai (ND1 + ND2)**.
-
+ 
 ---
 
 ## Žaidimo tikslas
