@@ -68,12 +68,27 @@ Taip pat gali įvykti atsitiktiniai įvykiai:
 
 ---
 
+
+## Švaraus kodo principai
+
+- Panaudotos **konstantos** (`GameConstants`) vietoje „magic numbers“  
+- Klasės trumpesnės nei 200 eilučių, metodai – < 30 eilučių  
+- Kodo struktūra aiški, logika padalinta į mažesnius vienetus  
+- Nėra pasikartojančio kodo (DRY principas)
+
+---
+
+
 ## Testavimas
 
 Naudota **JUnit 5** (failas `CityTest.java'):
 
-- testApplyDecisionAffectsBudget() – tikrina, ar sprendimai keičia biudžetą  
-- testApplyDecisionAffectsHappiness() – tikrina, ar sprendimai keičia laimės rodiklį  
+- `testApplyDecisionAffectsBudget()` – ar sprendimai keičia biudžetą  
+- `testApplyDecisionAffectsHappiness()` – ar sprendimai keičia laimę  
+- `testCityBankruptcyCondition()` – ar atpažįstamas bankrotas  
+- `testRandomEventReducesBudget()` – ar įvykis keičia biudžetą  
+- `testHardModeHasMoreEvents()` – ar „Hard“ režimas turi daugiau atsitiktinių įvykių
+
 
 Visi testai praėjo sėkmingai.
 
@@ -83,19 +98,21 @@ Paleidimas:
 ---
 
 ## Projekto struktūra
-
+---
 src/
 └── game/
 ├── City.java
 ├── Decision.java
 ├── DecisionFactory.java
+├── GameConstants.java
 ├── GameLoop.java
 ├── GameMode.java
 ├── GameStrategy.java
 ├── RandomEvent.java
+├── SpecialEvent.java
 ├── CityTest.java
 └── Main.java
-
+---
 
 
 ## Autorius
